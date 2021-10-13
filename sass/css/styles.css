@@ -25,6 +25,7 @@ body {
 .mainbox {
   height: 70vh;
   width: 69vw;
+  max-width: 2000px;
   border-radius: 2em;
   background-color: white;
   display: -webkit-box;
@@ -72,28 +73,35 @@ body {
 
 .mainbox__box2 .main-panel {
   height: 90%;
-  width: 70%;
+  width: 90%;
   margin-top: 3em;
   background-color: none;
 }
 
-.mainbox__box2 .accordion {
-  font-size: 0.8rem;
-  margin-top: 2em;
-  background-color: none;
-}
-
 .mainbox__box2 .upper-acc {
+  background-color: none;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 0em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainbox__box2 .question {
+  font-size: 0.8rem;
+  background-color: none;
+}
+
+.mainbox__box2 .question:hover {
+  font-weight: bold;
 }
 
 .mainbox__box2 .arrow-down {
-  height: 15%;
+  height: 25%;
   max-width: 5%;
-  margin-top: 2.5em;
-  margin-left: 8em;
 }
 /*# sourceMappingURL=styles.css.map */
