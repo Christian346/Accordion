@@ -5,6 +5,7 @@
 
 body{
    height: 100vh;
+   width: 100vw;
    background-image:linear-gradient( hsl(273, 75%, 66%),hsl(240, 73%, 65%));
    background-repeat: no-repeat;
    font-size:12px;
@@ -15,18 +16,17 @@ body{
 }
 .outer-mainbox{
     height: 70vh;
-    width: 55vw;
+    width: 55%;
     background-color:none;
     position: relative;
     right:92px;
     z-index:1;
 
     .box-img{
+   
       margin-right: 40em;
       margin-top: 17em;
-      height:auto;
-      
-      
+      height:auto;  
     }  
 }
 
@@ -132,3 +132,90 @@ body{
  }
 
 }//mainbox finishes
+
+.mobile-img{
+    display: none;
+}
+
+
+//smaller query
+
+@media screen and (max-width:930px) {
+     
+     .outer-mainbox{
+         height: 90vh;
+         width: 55%;
+         background-color:red;
+         position: relative;
+         z-index:4;
+        
+         .box-img{
+           display: none;//new
+           margin-right: 40em;
+           margin-top: 17em;
+           height:auto;  
+         }  
+     }
+     
+     .mainbox{
+         height: 70vh;
+         width: 95vw;//new
+         max-width: 2000px;
+         border-radius:2em;
+         background-color:hsl(240, 100%, 100%);
+         display: flex;
+         
+         &__box1{
+             background-color:none;
+             height:0;//make left side disspear
+             width:0;
+               
+         }
+         
+         .mobile-img{
+            display:block;// make mobile pic exist
+            max-width: 300px;
+            background-color:none;
+            margin:0 auto;
+            background-image: url(/images/bg-pattern-mobile.svg);
+            background-repeat: no-repeat;
+            background-position:50% 98%;
+           
+            .mobile-position{
+                height:auto;
+                max-width:100%;
+                margin-top:-9em;
+                background-color:none;
+            }// these 2 are new a needed
+        }
+
+         
+        &__box2{
+             
+             background-color:white;
+             height:100%;
+             width:100%;
+            
+             .faq{
+                 text-align: center;//new
+             }
+             
+             .text-box{
+                 width: 90%;
+                 background-color:none;
+                 margin-top: 1em;//new
+                 margin-left:2em;
+            }
+            .main-panel{
+                height: 90%;
+                width:90%;
+                margin: 0 auto;//new
+                margin-top: 3em;
+                background-color:none;
+                
+            }
+          
+              
+        }
+    }
+}

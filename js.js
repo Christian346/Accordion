@@ -1,20 +1,21 @@
-const acc = document.querySelectorAll('.item');
+const items = document.querySelectorAll('.item');
 
-for (x of acc){
-    x.addEventListener('click', function () {
+for (number of items){
+    number.addEventListener('click', function () {
        
         if (this.classList.contains('dropdown')) 
         {
-            this.classList.remove('dropdown');
+            this.classList.remove('dropdown'); 
         }
+        //if it contains that class remove it by clicking
 
          else 
          {
-            for (item of acc) 
+            for (number of items) 
             {
-                item.classList.remove('dropdown');
+                number.classList.remove('dropdown');// else remove it from everywhere
             }
-            this.classList.add('dropdown');
+            this.classList.add('dropdown'); //if clicked add it 
         }
     })
 }
