@@ -1,82 +1,45 @@
 //make the new div
 var contentdiv = document.createElement('div');
 
-//add classes to the new div
-//contentdiv.classList.add('');
-
-
 //find main panel
 var mainpanel = document.querySelectorAll('.main-panel')[0]
-//create variable with content
 
-var content = `
-<div class="item">
+
+//start a loop that repeats 5 times
+for(var i=0; i < 5; i++){
+    //make the new div
+    var contentdiv = document.createElement('div');
+   //find main panel
+    var mainpanel = document.querySelectorAll('.main-panel')[0]
+
+  //create variables for texts
+  var pregunta ="How many team members can I invite? "
+  var respuesta ="As many as you want "
+
+  //create variable with content
+  var content = `
+  <div class="item">
            <div class="upper-acc">
-            <p class="question" >How many team members can I invite?</p> 
+            <p class="question" > ${pregunta}</p> 
             <img src="images/icon-arrow-down.svg" class ="arrow-down" alt="">
         </div>
             <div class="popup">
-            <p> nisi ut aliquip ex ea commodo consequat.</p>
+            <p> ${respuesta}</p>
             </div>
         </div>
             <hr>
-            
-            <div class="item">
-            <div class="upper-acc"> 
-            <p class="question" >What is the maximum file upload size?</p>
-            <img src="images/icon-arrow-down.svg" class ="arrow-down" alt="">
-            </div>
+  `
+  //add content into contentdiv
+  contentdiv.innerHTML = content
 
-            <div class="popup">
-            <p> nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-        </div>
-            <hr>
-
-            <div class="item">
-            <div class="upper-acc">
-            <p href ="" class="question" >How do I reset my password?</p>
-            <img src="images/icon-arrow-down.svg" class ="arrow-down" alt="">
-            </div>
-
-            <div class="popup">
-            <p> nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-        </div>
-            <hr>
-
-            <div class="item">
-            <div class="upper-acc">
-            <p href ="" class="question" >Can I cancel my subscription?</p>
-            <img src="images/icon-arrow-down.svg" class ="arrow-down" alt="">
-           </div>
-
-            <div class="popup">
-            <p> nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-        </div>
-            <hr>
-
-            <div class="item">
-            <div class="upper-acc">
-            <p href ="" class="question" >Do you provide additional support?</p>
-            <img src="images/icon-arrow-down.svg" class ="arrow-down" alt="">
-            </div>
-
-            <div class="popup">
-            <p> nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-        </div>
-            <hr>
-`
-//add content into contentdiv
-contentdiv.innerHTML = content
-//append the content div to main panel
- mainpanel.append(contentdiv)
+  //append the content div to main panel
+  mainpanel.append(contentdiv)
+ }
 
 
- 
-// do the accordion happen
+
+
+// make the accordion happen
 const items = document.querySelectorAll('.item');
 
 for (number of items){
@@ -99,11 +62,9 @@ for (number of items){
         }
     })
 }
-// for all items class add event as follows
 
-//step 2 make a list 
-//main panel contains all the items 
-//if i select an item of accordion add it to the list 
+
+//list the items that are clicked
 
 function listWhenClicked(){
     var questions = document.querySelectorAll('.item')// gets all questions
