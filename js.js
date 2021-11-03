@@ -1,37 +1,41 @@
+
+var pregunta =["How many team members can I invite? ", "What is the maximum file upload size?", " How do I reset my password?", " Can I cancel my subscription?", " Do you provide additional support?"  ]
+var respuesta = ["As many as you want"," 5 files", "you cant", " no you cannot", "sometimes"]
+
+
+
+
+
 //make the new div
 var contentdiv = document.createElement('div');
 
 //find main panel
 var mainpanel = document.querySelectorAll('.main-panel')[0]
 
-
 //start a loop that repeats 5 times
-for(var i=0; i < 5; i++){
+for(var i=0; i < pregunta.length; i++){
     //make the new div
     var contentdiv = document.createElement('div');
    //find main panel
     var mainpanel = document.querySelectorAll('.main-panel')[0]
-
   //create variables for texts
-  var pregunta ="How many team members can I invite? "
-  var respuesta ="As many as you want "
-
+ // var pregunta ="How many team members can I invite? "
+  //var respuesta ="As many as you want "
   //create variable with content
   var content = `
   <div class="item">
            <div class="upper-acc">
-            <p class="question" > ${pregunta}</p> 
+            <p class="question" > ${pregunta[i]}</p> 
             <img src="images/icon-arrow-down.svg" class ="arrow-down" alt="">
         </div>
             <div class="popup">
-            <p> ${respuesta}</p>
+            <p> ${respuesta[i]}</p>
             </div>
         </div>
             <hr>
   `
   //add content into contentdiv
   contentdiv.innerHTML = content
-
   //append the content div to main panel
   mainpanel.append(contentdiv)
  }
